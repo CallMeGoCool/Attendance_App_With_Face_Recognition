@@ -4,6 +4,7 @@ import static androidx.core.app.ActivityCompat.startActivityForResult;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -19,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -50,6 +52,8 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+
+import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 
 public class StudentActivity extends AppCompatActivity {
 
@@ -236,6 +240,11 @@ public class StudentActivity extends AppCompatActivity {
         adapter.notifyItemChanged(position);
     }
 
+    private SharedPreferences getPreferences() {
+        return getSharedPreferences("MaterialTapTargetPrompt", MODE_PRIVATE);
+    }
+
+
     private void setToolbar() {
         toolbar = findViewById(R.id.toolbar);
         TextView title = toolbar.findViewById(R.id.title_toolbar);
@@ -289,6 +298,53 @@ public class StudentActivity extends AppCompatActivity {
             }
         });
 
+        SharedPreferences prefs = getPreferences();
+        if (!prefs.getBoolean("prompt_shown", false)) {
+            // Show the prompt
+            new MaterialTapTargetPrompt.Builder(StudentActivity.this)
+                    .setTarget(back)
+                    .setPrimaryText("Back")
+                    .setSecondaryText("Click here to go back")
+                    .setIcon(R.drawable.icon_back) // Set the icon to the back icon
+                    .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener()
+                    {
+                        @Override
+                        public void onPromptStateChanged(@NonNull MaterialTapTargetPrompt prompt, int state)
+                        {
+                            if (state == MaterialTapTargetPrompt.STATE_DISMISSED)
+                            {
+                                // Show the next prompt when the current prompt is dismissed
+                                new MaterialTapTargetPrompt.Builder(StudentActivity.this)
+                                        .setTarget(camera)
+                                        .setPrimaryText("Camera")
+                                        .setSecondaryText("Click here to capture a photo or record a video to mark attendance")
+                                        .setIcon(R.drawable.icon_camera)
+                                        .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener()
+                                        {
+                                            @Override
+                                            public void onPromptStateChanged(@NonNull MaterialTapTargetPrompt prompt, int state)
+                                            {
+                                                if (state == MaterialTapTargetPrompt.STATE_DISMISSED)
+                                                {
+                                                    // Show the next prompt when the current prompt is dismissed
+                                                    new MaterialTapTargetPrompt.Builder(StudentActivity.this)
+                                                            .setTarget(save)
+                                                            .setPrimaryText("Save")
+                                                            .setSecondaryText("Click here to save the attendance")
+                                                            .setIcon(R.drawable.icon_save) // Set the icon to the save icon
+                                                            .show();
+                                                }
+                                            }
+                                        })
+                                        .show();
+                            }
+                        }
+                    })
+                    .show();
+
+            // After showing the prompt, set the shared preference to indicate that the prompt has been shown
+            prefs.edit().putBoolean("prompt_shown", true).apply();
+        }
     }
 
     public File createPermanentImageFile() throws IOException {
@@ -459,6 +515,8 @@ public class StudentActivity extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
+
+
     private boolean onMenuItemClick(MenuItem menuItem) {
         if(menuItem.getItemId() == R.id.add_student){
             showAddStudentDialog();
@@ -469,11 +527,9 @@ public class StudentActivity extends AppCompatActivity {
         else if(menuItem.getItemId() == R.id.show_attendance_sheet){
             openSheetList();
         }
-
-
-
         return true;
     }
+
 
     private void openSheetList() {
         long[] idArray = new long[studentItems.size()];
@@ -520,6 +576,39 @@ public class StudentActivity extends AppCompatActivity {
         StudentItem studentItem = new StudentItem(sid,roll,name);
         studentItems.add(studentItem);
         adapter.notifyDataSetChanged();
+
+// Check if it's the first student
+        if (studentItems.size() == 1) {
+            // Show the MaterialTapTargetPrompt
+            recyclerView.post(() -> {
+                // Find the position of the newly added student item
+                int position = studentItems.indexOf(studentItem);
+
+                // Find the corresponding view in the RecyclerView
+                RecyclerView.ViewHolder viewHolder = recyclerView.findViewHolderForAdapterPosition(position);
+
+                if (viewHolder != null) {
+                    new MaterialTapTargetPrompt.Builder(StudentActivity.this)
+                            .setTarget(viewHolder.itemView)
+                            .setPrimaryText("Mark Attendance")
+                            .setSecondaryText("Tap here to mark attendances.")
+                            .setPromptStateChangeListener(new MaterialTapTargetPrompt.PromptStateChangeListener() {
+                                @Override
+                                public void onPromptStateChanged(@NonNull MaterialTapTargetPrompt prompt, int state) {
+                                    if (state == MaterialTapTargetPrompt.STATE_DISMISSED) {
+                                        // Show the second prompt when the first prompt is dismissed
+                                        new MaterialTapTargetPrompt.Builder(StudentActivity.this)
+                                                .setTarget(viewHolder.itemView) // Set the target to the same view as the first prompt
+                                                .setPrimaryText("Manage Student")
+                                                .setSecondaryText("Hold to edit, delete or add image of the student")
+                                                .show();
+                                    }
+                                }
+                            })
+                            .show();
+                }
+            });
+        }
     }
 
     @Override

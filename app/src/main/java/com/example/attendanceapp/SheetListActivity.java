@@ -27,6 +27,7 @@ public class SheetListActivity extends AppCompatActivity {
     private ListView sheetList;
     private ArrayAdapter adapter;
     private ArrayList<String> listItems = new ArrayList();
+    private ArrayList<String> formattedListItems = new ArrayList<>(); // New list for formatted dates
     private long cid;
     Toolbar toolbar;
     private TextView subTitle;
@@ -44,7 +45,7 @@ public class SheetListActivity extends AppCompatActivity {
         setToolbar();
 
         sheetList = findViewById(R.id.sheetList);
-        adapter = new ArrayAdapter(this, R.layout.sheet_list, R.id.date_list_item, listItems);
+        adapter = new ArrayAdapter(this, R.layout.sheet_list, R.id.date_list_item, formattedListItems);
 
         sheetList.setAdapter(adapter);
 
@@ -85,18 +86,23 @@ public class SheetListActivity extends AppCompatActivity {
     private void loadListItems() {
         Cursor cursor = new DbHelper(this).getDistinctMonths(cid);
 
-        SimpleDateFormat originalFormat = new SimpleDateFormat("dd.MM.yyyy", Locale.ENGLISH);
+        SimpleDateFormat originalFormat = new SimpleDateFormat("MM.yyyy", Locale.ENGLISH);
         SimpleDateFormat targetFormat = new SimpleDateFormat("MMMM yyyy", Locale.ENGLISH);
 
         while (cursor.moveToNext()) {
             String date = cursor.getString(cursor.getColumnIndex(DbHelper.DATE_KEY));
+            listItems.add(date.substring(3));
+
+
+            // Format the date and add it to formattedListItems
             try {
-                Date dateObj = originalFormat.parse(date);
+                Date dateObj = originalFormat.parse(date.substring(3));
                 String formattedDate = targetFormat.format(dateObj);
-                listItems.add(formattedDate);
+                formattedListItems.add(formattedDate);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
+
         }
     }
 }

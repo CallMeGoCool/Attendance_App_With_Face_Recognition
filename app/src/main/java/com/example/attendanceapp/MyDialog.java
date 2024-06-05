@@ -1,18 +1,26 @@
 package com.example.attendanceapp;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
+
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.DialogFragment;
 
 public class MyDialog extends DialogFragment {
@@ -42,6 +50,7 @@ public class MyDialog extends DialogFragment {
     public void setListener(OnClickListener listener) {
         this.listener = listener;
     }
+
 
     @NonNull
     @Override

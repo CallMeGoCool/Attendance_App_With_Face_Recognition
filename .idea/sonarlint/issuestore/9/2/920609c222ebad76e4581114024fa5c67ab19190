@@ -1,17 +1,17 @@
 
-L
-java:S3740"/Provide the parametrized type for this generic.(ô¸ş”8ÿ‰ÒÏş1
-Q
-java:S3740"/Provide the parametrized type for this generic.(Ÿš¿„ıÿÿÿÿ8€ŠÒÏş1
-Q
-java:S3740/"/Provide the parametrized type for this generic.(õÿôøÿÿÿÿ8ŠÒÏş1
-b
-java:S2095V"FUse try-with-resources or close this "DbHelper" in a "finally" clause.(ºµâ8‚ŠÒÏş1
-s
-java:S1450"VRemove the "adapter" field and declare it as a local variable in the relevant methods.(ô¸ş”8¢ŠÒÏş1
-z
-java:S1450"XRemove the "sheetList" field and declare it as a local variable in the relevant methods.(‹šûèøÿÿÿÿ8¤ŠÒÏş1
-t
-java:S1450 "WRemove the "subTitle" field and declare it as a local variable in the relevant methods.(ãÃÃ‚8¥ŠÒÏş1
-R
-java:S1874D"5Remove this use of "onBackPressed"; it is deprecated.(¾®±¿8òŠÒÏş1
+r
+java:S3740"/Provide the parametrized type for this generic.(ô¸ş”8Ï¦øş1J$a6f69e8e-af7d-4c7d-af45-24847cabf44e
+w
+java:S3740"/Provide the parametrized type for this generic.(Ÿš¿„ıÿÿÿÿ8Ï¦øş1J$5d962fde-d927-4ad7-8c14-4dc3e9ec43d7
+w
+java:S37400"/Provide the parametrized type for this generic.(Éùº™ÿÿÿÿÿ8àã¥úş1J$9c154c45-db6b-4c0b-9573-8bf5dddab154
+ˆ
+java:S2095W"FUse try-with-resources or close this "DbHelper" in a "finally" clause.(ºµâ8âã¥úş1J$0a92b533-4b9c-4acf-882d-19421c608040
+™
+java:S1450"VRemove the "adapter" field and declare it as a local variable in the relevant methods.(ô¸ş”8ã¦øş1J$59ccfa65-f5d2-4a92-ac29-2033888abe85
+ 
+java:S1450"XRemove the "sheetList" field and declare it as a local variable in the relevant methods.(‹šûèøÿÿÿÿ8ã¦øş1J$6b7b2d99-80ea-4a9f-901e-6c5dad17e782
+š
+java:S1450!"WRemove the "subTitle" field and declare it as a local variable in the relevant methods.(ãÃÃ‚8óå¥úş1J$87964a8f-d53f-427e-a022-425314c72f0d
+x
+java:S1874E"5Remove this use of "onBackPressed"; it is deprecated.(¾®±¿8¨è¥úş1J$92def1c8-ad19-4854-af7a-802004df2f28

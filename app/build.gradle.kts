@@ -74,4 +74,5 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+    implementation("uk.co.samuelwall:material-tap-target-prompt:3.3.0")
 }

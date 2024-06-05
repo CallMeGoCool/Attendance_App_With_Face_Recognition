@@ -1,8 +1,5 @@
 
 †
-java:S1612:"CReplace this lambda with method reference 'this::gotoItemActivity'.(¥çİÃ8§úïÎş1J$3b2bdd7d-ae83-447a-ad45-a3e41da7e03c
+java:S1612>"CReplace this lambda with method reference 'this::gotoItemActivity'.(¥çİÃ8Ûƒ¦úş1J$29ba1a8e-e6bc-413d-9b48-12a023181c1f
 ƒ
-java:S1612k";Replace this lambda with method reference 'this::addClass'.(éÓÍ–ÿÿÿÿÿ8¹úïÎş1J$ac791172-7687-4c39-a8e6-db11d02d206d
-“
-java:S1301|"KReplace this "switch" statement by "if" statements to increase readability.(øå´¡ÿÿÿÿÿ8ÂúïÎş1J$0ff1600e-022d-4041-972c-b8b1285eab0a
-i	java:S131|""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8ÃúïÎş1J$17d5435d-cb86-468b-a846-312c38260291
+java:S1612{";Replace this lambda with method reference 'this::addClass'.(éÓÍ–ÿÿÿÿÿ8ˆ„¦úş1J$062185f5-74a0-4072-a141-988a5a8bf4fc

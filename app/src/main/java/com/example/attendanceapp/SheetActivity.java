@@ -1,5 +1,7 @@
 package com.example.attendanceapp;
 
+import static android.app.ProgressDialog.show;
+
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.graphics.Color;
@@ -24,6 +26,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.Calendar;
+
+import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 
 public class SheetActivity extends AppCompatActivity {
 
@@ -206,13 +210,21 @@ public class SheetActivity extends AppCompatActivity {
         back.setOnClickListener(v -> onBackPressed());
 
         save.setOnClickListener(v -> createFile());
+
+         // Show the MaterialTapTargetPrompt after the toolbar is set
+         new MaterialTapTargetPrompt.Builder(SheetActivity.this)
+                 .setTarget(save)
+                 .setPrimaryText("Save Attendance")
+                 .setSecondaryText("Tap here to download the attendance records of the month")
+                 .setIcon(R.drawable.icon_save)
+                 .show();
 }
 
     private void createFile() {
         Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
         intent.setType("text/csv");
-        intent.putExtra(Intent.EXTRA_TITLE, "AttendanceData.csv");
+        intent.putExtra(Intent.EXTRA_TITLE, "Attendance_Data.csv");
         startActivityForResult(intent, CREATE_FILE_REQUEST_CODE);
     }
     }
