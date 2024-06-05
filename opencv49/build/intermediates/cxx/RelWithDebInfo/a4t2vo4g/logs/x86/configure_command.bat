@@ -1,0 +1,19 @@
+@echo off
+"D:\\SDK\\cmake\\3.22.1\\bin\\cmake.exe" ^
+  "-HC:\\Users\\Gokul\\AndroidStudioProjects\\AttendanceApp\\opencv49\\libcxx_helper" ^
+  "-DCMAKE_SYSTEM_NAME=Android" ^
+  "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON" ^
+  "-DCMAKE_SYSTEM_VERSION=29" ^
+  "-DANDROID_PLATFORM=android-29" ^
+  "-DANDROID_ABI=x86" ^
+  "-DCMAKE_ANDROID_ARCH_ABI=x86" ^
+  "-DANDROID_NDK=D:\\SDK\\ndk\\26.1.10909125" ^
+  "-DCMAKE_ANDROID_NDK=D:\\SDK\\ndk\\26.1.10909125" ^
+  "-DCMAKE_TOOLCHAIN_FILE=D:\\SDK\\ndk\\26.1.10909125\\build\\cmake\\android.toolchain.cmake" ^
+  "-DCMAKE_MAKE_PROGRAM=D:\\SDK\\cmake\\3.22.1\\bin\\ninja.exe" ^
+  "-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=C:\\Users\\Gokul\\AndroidStudioProjects\\AttendanceApp\\opencv49\\build\\intermediates\\cxx\\RelWithDebInfo\\a4t2vo4g\\obj\\x86" ^
+  "-DCMAKE_RUNTIME_OUTPUT_DIRECTORY=C:\\Users\\Gokul\\AndroidStudioProjects\\AttendanceApp\\opencv49\\build\\intermediates\\cxx\\RelWithDebInfo\\a4t2vo4g\\obj\\x86" ^
+  "-DCMAKE_BUILD_TYPE=RelWithDebInfo" ^
+  "-BC:\\Users\\Gokul\\AndroidStudioProjects\\AttendanceApp\\opencv49\\.cxx\\RelWithDebInfo\\a4t2vo4g\\x86" ^
+  -GNinja ^
+  "-DANDROID_STL=c++_shared"

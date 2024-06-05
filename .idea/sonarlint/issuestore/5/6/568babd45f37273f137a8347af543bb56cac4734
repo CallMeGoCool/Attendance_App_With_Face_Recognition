@@ -1,0 +1,25 @@
+
+’	java:S117@"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÙ€V8ğÍêÖü1J$a870ee22-60b2-4d6d-b038-fc02f60d409c
+’	java:S117j"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßÙ€V8™‹ıÖü1J$335e1a55-75f7-4dbc-a454-852e5b52af64
+’	java:S117n"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜Õ½8€ÎêÖü1J$1842b320-1037-410f-b4cf-d59ad7777e4a
+“	java:S117o"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ÍÍ8‚ÎêÖü1J$25219baf-5a5b-4ea7-addc-21911d6b8783
+˜	java:S117p"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç£ıúûÿÿÿÿ8ƒÎêÖü1J$97da4e75-54f2-4fb7-91e0-b59405fa8824
+“	java:S117q"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ß©™8…ÎêÖü1J$10f3ee3d-ed5b-4d2c-9834-f419efa8e923
+r
+java:S10662"/Merge this if statement with the enclosing one.(àæØå8³›ÖÓü1J$84886421-343c-4d49-8fb6-d076a2f3e98e
+‰
+java:S2095:"FUse try-with-resources or close this "DbHelper" in a "finally" clause.(‹œà–8³‹ıÖü1J$696b4c3e-ba82-4ed7-b30d-3f1ea47a00ac
+
+java:S2095["JUse try-with-resources or close this "OutputStream" in a "finally" clause.(¨¾òä8²‹ıÖü1J$96b733ca-38eb-43dd-95dd-d57523d7a621
+š
+java:S1450"WRemove the "subTitle" field and declare it as a local variable in the relevant methods.(ãÃÃ‚8§Ó½Óü1J$c555f15e-f020-4108-a7c7-4f8b6e699a24
+
+java:S1874/"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8ĞœÖÓü1J$b322f2b0-a333-4e28-93cc-58f11e1477c3
+š
+java:S3776b"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¼Âëµÿÿÿÿÿ8ÎÓ½Óü1J$eec64b43-0493-4827-86cf-c77eafc15041
+˜
+java:S3252³"OUse static access with "android.widget.LinearLayout" for "SHOW_DIVIDER_MIDDLE".(Éçç úÿÿÿÿ8³âêÖü1J$8cccdba7-60d6-4a80-bd72-04373f9730de
+y
+java:S1874Î"5Remove this use of "onBackPressed"; it is deprecated.(¾®±¿8«Ô½Óü1J$af03196a-1077-4f99-a0dd-fd3d6dbfe729
+‚
+java:S1874Ø">Remove this use of "startActivityForResult"; it is deprecated.(Ü”ª8“Á¿Óü1J$4d62d4b9-aa41-442f-b6a0-4ae60474e842

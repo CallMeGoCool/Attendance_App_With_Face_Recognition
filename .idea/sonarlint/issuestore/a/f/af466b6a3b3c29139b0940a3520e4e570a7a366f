@@ -1,0 +1,19 @@
+
+
+java:S1192"nDefine a constant instead of duplicating this literal " INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " 3 times.(É÷Á ûÿÿÿÿ8ÜÀÈÎş1
+p
+java:S1192"NDefine a constant instead of duplicating this literal "CREATE TABLE " 3 times.(Âµš–şÿÿÿÿ8İÀÈÎş1
+q
+java:S1192/"TDefine a constant instead of duplicating this literal " INTEGER NOT NULL, " 3 times.(ĞÇ·“8ŞÀÈÎş1
+x
+java:S1192""VDefine a constant instead of duplicating this literal "DROP TABLE IF EXISTS " 3 times.(Ïéãşÿÿÿÿ8ŞÀÈÎş1
+k
+java:S11922"NDefine a constant instead of duplicating this literal ") REFERENCES " 3 times.(±ÓÚ8ßÀÈÎş1
+q
+java:S1192#"ODefine a constant instead of duplicating this literal "SELECT * FROM " 3 times.(‘Ò“Šøÿÿÿÿ8ßÀÈÎş1
+u
+java:S1128	"-Remove this unused import 'android.os.Build'.(ãÇ¤Úıÿÿÿÿ8‚¼È†ü1J$7bd88279-f20c-454e-9e12-80f594b6f6a4
+U
+java:S10686"8Remove this unused "SELECT_STUDENT_TABLE" private field.(Ò–Ú8ˆÃÈÎş1
+T
+java:S1068L"7Remove this unused "SELECT_STATUS_TABLE" private field.(Ùô¬ä8ˆÃÈÎş1
