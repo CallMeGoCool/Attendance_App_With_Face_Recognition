@@ -159,7 +159,7 @@ public class StudentActivity extends AppCompatActivity {
             }
 
 
-        } else if (requestCode == REQUEST_PICK_IMAGE && resultCode == RESULT_OK) {
+        }else if (requestCode == REQUEST_PICK_IMAGE && resultCode == RESULT_OK) {
             // The image is picked from the gallery, you can save it to a permanent file in your application's storage
             Uri selectedImageUri = data.getData();
             try {
@@ -168,8 +168,11 @@ public class StudentActivity extends AppCompatActivity {
 
                 // Check if the image file exists in the specified directory
                 if (imageFile.exists()) {
-                    // Display an alert that the image has been uploaded
-                    Toast.makeText(this, "Image has been uploaded.", Toast.LENGTH_SHORT).show();
+                    SharedPreferences prefs = getSharedPreferences("ImageCounter", MODE_PRIVATE);
+                    // Get the current counter value for the student
+                    int counter = prefs.getInt(String.valueOf(currentRollNumber), 1);
+                    // Display a toast message
+                    Toast.makeText(this, "Image (" + counter + ") has been added to Roll No. " + currentRollNumber, Toast.LENGTH_SHORT).show();
                 } else {
                     // Display an alert that there was an error
                     Toast.makeText(this, "Error: Image was not uploaded.", Toast.LENGTH_SHORT).show();
@@ -348,22 +351,29 @@ public class StudentActivity extends AppCompatActivity {
     }
 
     public File createPermanentImageFile() throws IOException {
+        // Get the SharedPreferences
+        SharedPreferences prefs = getSharedPreferences("ImageCounter", MODE_PRIVATE);
+
+        // Get the current counter value for the student
+        int counter = prefs.getInt(String.valueOf(currentRollNumber), 1);
+
         // Create an image file name
+
         String rollNumberString = String.valueOf(currentRollNumber);
-        String imageFileName = rollNumberString;
+        String imageFileName = rollNumberString + "(" + counter + ")";
 
-        // For images picked from the gallery, use the Pictures/ClassTrack directory
-        File storageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "ClassTrack/" + className + "/" + subjectName);
+        // Create a subdirectory for each student inside the subjectName directory
+        File studentDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "ClassTrack/" + className + "/" + subjectName + "/" + rollNumberString);
 
-        if (!storageDir.exists()) {
-            if (!storageDir.mkdirs()) {
+        if (!studentDir.exists()) {
+            if (!studentDir.mkdirs()) {
                 Log.e("TAG", "Failed to create directory");
                 return null;
             }
         }
 
         // Create a permanent file
-        File image = new File(storageDir, imageFileName + ".jpg");
+        File image = new File(studentDir, imageFileName + ".jpg");
 
         // If a file with the same name already exists, delete it
         if (image.exists()) {
@@ -376,6 +386,13 @@ public class StudentActivity extends AppCompatActivity {
 
         // Save a file: path for use with ACTION_VIEW intents
         currentPhotoPath = image.getAbsolutePath();
+
+        // Increment the counter and save it back to SharedPreferences
+        counter = ((counter + 1) % 4 == 0) ? 1 : counter + 1;
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(String.valueOf(currentRollNumber), counter);
+        editor.apply();
+
         return image;
     }
 
@@ -501,6 +518,8 @@ public class StudentActivity extends AppCompatActivity {
                 studentItem.setChanged(false); // Reset the changed flag after saving
             }
         }
+        // Display a toast message
+        Toast.makeText(this, "Changes have been marked/saved", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -600,7 +619,7 @@ public class StudentActivity extends AppCompatActivity {
                                         new MaterialTapTargetPrompt.Builder(StudentActivity.this)
                                                 .setTarget(viewHolder.itemView) // Set the target to the same view as the first prompt
                                                 .setPrimaryText("Manage Student")
-                                                .setSecondaryText("Hold to edit, delete or add image of the student")
+                                                .setSecondaryText("Hold to edit, delete or add image of the student. You can add upto 3 images for each student.")
                                                 .show();
                                     }
                                 }

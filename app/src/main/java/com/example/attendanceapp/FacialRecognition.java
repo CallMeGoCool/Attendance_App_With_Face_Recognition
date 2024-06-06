@@ -77,20 +77,31 @@ public class FacialRecognition {
         ExecutorService executor = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         String specificFolderPath = IMAGES_FOLDER_NAME + "/" + className + "/" + subjectName;
         File folder = new File(specificFolderPath);
-        File[] files = folder.listFiles();
-        if (files != null) {
-            for (File file : files) {
-                if (file.isFile()) {
-                    executor.submit(() -> {
-                        String fileName = file.getName();
-                        String personName = fileName.substring(0, fileName.lastIndexOf('.'));
-                        Mat encodedFace = Imgcodecs.imread(file.getAbsolutePath(), Imgcodecs.IMREAD_GRAYSCALE);
-                        if (encodedFace.empty()) {
-                            Log.e("FacialRecognition", "Failed to read the image: " + file.getAbsolutePath());
-                        } else {
-                            encodedFaces.put(personName, encodedFace);
+        File[] studentDirs = folder.listFiles();
+        if (studentDirs != null) {
+            for (File studentDir : studentDirs) {
+                if (studentDir.isDirectory()) {
+                    File[] files = studentDir.listFiles();
+                    if (files != null) {
+                        for (File file : files) {
+                            if (file.isFile()) {
+                                executor.submit(() -> {
+                                    String fileName = file.getName();
+                                    String personName = fileName.substring(0, fileName.lastIndexOf('.'));
+                                    Mat encodedFace = Imgcodecs.imread(file.getAbsolutePath(), Imgcodecs.IMREAD_GRAYSCALE);
+                                    if (encodedFace.empty()) {
+                                        Log.e("FacialRecognition", "Failed to read the image: " + file.getAbsolutePath());
+                                    } else {
+                                        // Apply histogram equalization
+                                        Imgproc.equalizeHist(encodedFace, encodedFace);
+                                        encodedFaces.put(personName, encodedFace);
+                                    }
+                                });
+                            }
                         }
-                    });
+                    } else {
+                        Log.e("FacialRecognition", "Failed to list files in the directory: " + studentDir.getAbsolutePath());
+                    }
                 }
             }
         } else {
@@ -109,6 +120,9 @@ public class FacialRecognition {
                     Log.e("FacialRecognition", "Failed to open the image.");
                     return;
                 }
+
+                // Apply histogram equalization
+                Imgproc.equalizeHist(image, image);
 
                 MatOfRect faceDetections = new MatOfRect();
                 faceDetector.detectMultiScale(image, faceDetections);
@@ -155,15 +169,23 @@ public class FacialRecognition {
                     ((Activity) context).runOnUiThread(() -> {
                         Toast.makeText(context, "Hello, best match found with " + bestMatchPerson[0], Toast.LENGTH_SHORT).show();
 
+                        // Extract the roll number from the bestMatchPerson[0] string
+                        String bestMatchPersonRoll = bestMatchPerson[0].substring(0, bestMatchPerson[0].indexOf("(")).trim();
+                        int roll = Integer.parseInt(bestMatchPersonRoll);
+
                         // Find the StudentItem with the matching roll number
                         for (int i = 0; i < studentItems.size(); i++) {
                             StudentItem item = studentItems.get(i);
-                            if (item.getRoll() == Integer.parseInt(bestMatchPerson[0])) {
+                            if (item.getRoll() == roll) {
                                 // Change the status and notify the adapter
                                 changeStatus(i);
                                 break;
                             }
                         }
+                    });
+                }else {
+                    ((Activity) context).runOnUiThread(() -> {
+                        Toast.makeText(context, "No match found", Toast.LENGTH_SHORT).show();
                     });
                 }
 
@@ -201,6 +223,9 @@ public class FacialRecognition {
                 while (videoCapture.read(frame)) {
                     Mat grayFrame = new Mat();
                     Imgproc.cvtColor(frame, grayFrame, Imgproc.COLOR_BGR2GRAY);
+
+                    // Apply histogram equalization
+                    Imgproc.equalizeHist(grayFrame, grayFrame);
 
                     MatOfRect faceDetections = new MatOfRect();
                     faceDetector.detectMultiScale(grayFrame, faceDetections);
@@ -247,15 +272,23 @@ public class FacialRecognition {
                     ((Activity) context).runOnUiThread(() -> {
                         Toast.makeText(context, "Hello, best match found with " + bestMatchPerson[0], Toast.LENGTH_SHORT).show();
 
+                        // Extract the roll number from the bestMatchPerson[0] string
+                        String bestMatchPersonRoll = bestMatchPerson[0].substring(0, bestMatchPerson[0].indexOf("(")).trim();
+                        int roll = Integer.parseInt(bestMatchPersonRoll);
+
                         // Find the StudentItem with the matching roll number
                         for (int i = 0; i < studentItems.size(); i++) {
                             StudentItem item = studentItems.get(i);
-                            if (item.getRoll() == Integer.parseInt(bestMatchPerson[0])) {
+                            if (item.getRoll() == roll) {
                                 // Change the status and notify the adapter
                                 changeStatus(i);
                                 break;
                             }
                         }
+                    });
+                }else {
+                    ((Activity) context).runOnUiThread(() -> {
+                        Toast.makeText(context, "No match found", Toast.LENGTH_SHORT).show();
                     });
                 }
 
@@ -275,9 +308,12 @@ public class FacialRecognition {
         }
     }
     private void changeStatus(int position) {
-        studentItems.get(position).setStatus("P");
-        studentItems.get(position).setChanged(true);
-
-        adapter.notifyItemChanged(position);
+        if (position >= 0 && position < studentItems.size()) {
+            studentItems.get(position).setStatus("P");
+            studentItems.get(position).setChanged(true);
+            adapter.notifyItemChanged(position);
+        } else {
+            Log.e("FacialRecognition", "Invalid position: " + position);
+        }
     }
 }

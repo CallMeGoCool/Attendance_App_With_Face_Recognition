@@ -7,10 +7,10 @@
 “	java:S117u"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(½ß©™8ë¢¦úş1J$b12f1b6e-ed60-4d65-ac38-1f44df47b27c
 r
 java:S10666"/Merge this if statement with the enclosing one.(àæØå8ğ¢¦úş1J$28bd4e98-7562-43ef-b9f2-ed03f1841d59
-‰
-java:S2095>"FUse try-with-resources or close this "DbHelper" in a "finally" clause.(‹œà–8…£¦úş1J$94c442d8-5718-4e08-bdfe-4c61e74b3c97
 
 java:S2095_"JUse try-with-resources or close this "OutputStream" in a "finally" clause.(¨¾òä8…£¦úş1J$03fb5e8b-6b31-49cf-a367-1427a42fac49
+‰
+java:S2095>"FUse try-with-resources or close this "DbHelper" in a "finally" clause.(‹œà–8…£¦úş1J$94c442d8-5718-4e08-bdfe-4c61e74b3c97
 š
 java:S1450#"WRemove the "subTitle" field and declare it as a local variable in the relevant methods.(ãÃÃ‚8£¦úş1J$84c3b34d-142d-4ae8-ad7b-e6d25a7f4737
 
