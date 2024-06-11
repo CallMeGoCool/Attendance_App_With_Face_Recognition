@@ -120,7 +120,7 @@ public class StudentActivity extends AppCompatActivity {
             File imageFile = new File(currentPhotoPath);
             if (imageFile.exists()) {
                 // Display an alert that the image has been uploaded
-                Toast.makeText(this, "Image has been uploaded.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Image has been uploaded. Attendance is being processed", Toast.LENGTH_SHORT).show();
 
                 // Create an instance of FaceRecognition
                 FacialRecognition facialRecognition = new FacialRecognition(this, className, subjectName,adapter,studentItems);
@@ -145,7 +145,7 @@ public class StudentActivity extends AppCompatActivity {
             File videoFile = new File(currentVideoPath);
             if (videoFile.exists()) {
                 // Display an alert that the video has been uploaded
-                Toast.makeText(this, "Video has been uploaded.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Video has been uploaded. Attendance is being processed", Toast.LENGTH_SHORT).show();
 
                 // Create an instance of FaceRecognition
                 FacialRecognition facialRecognition = new FacialRecognition(this, className, subjectName,adapter,studentItems);

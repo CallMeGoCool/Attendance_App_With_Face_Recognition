@@ -1,73 +1,73 @@
 
 l
-java:S1604•"(Make this anonymous inner class a lambda(ò´Ï£8µ“¢“€2J$c3f96190-cf75-4bf3-98a5-40b93d4d5b06
+java:S1604•"(Make this anonymous inner class a lambda(ò´Ï£8µ“¢“€2J$07d2e6dc-97b8-4486-b2cf-ff603531a01d
 q
-java:S1604Ÿ"(Make this anonymous inner class a lambda(§áÂùúÿÿÿÿ8·“¢“€2J$ead50e03-3eb6-41e7-a5ea-0e4d71f2a0f5
+java:S1604Ÿ"(Make this anonymous inner class a lambda(§áÂùúÿÿÿÿ8·“¢“€2J$d1ffae3b-74c2-4c85-bbac-0bef93f40beb
 k
-java:S1604‹"(Make this anonymous inner class a lambda(°ã‡l8·“¢“€2J$b40cf5c2-cff0-456a-ab55-d0fbdbf5adfa
+java:S1604‹"(Make this anonymous inner class a lambda(°ã‡l8·“¢“€2J$ba4e9852-d58f-454a-9c6d-7379dd80442f
 l
-java:S1604Ã"(Make this anonymous inner class a lambda(Õó’¬8¹“¢“€2J$ad8fe57d-a306-43c9-beae-6a429c6756d6
+java:S1604Ã"(Make this anonymous inner class a lambda(Õó’¬8¹“¢“€2J$427334fc-aa23-4d29-adac-2ed94b7c4f0f
 l
-java:S1604¶"(Make this anonymous inner class a lambda(Õó’¬8¹“¢“€2J$45e689cd-67da-4c45-95a8-9bbc19ea6a39
+java:S1604¶"(Make this anonymous inner class a lambda(Õó’¬8¹“¢“€2J$2a05ef2c-0a89-40cf-bfd4-9de20b0fc69f
 l
-java:S1604ä"(Make this anonymous inner class a lambda(âÚÂÖ8º“¢“€2J$78fb8353-a32e-4a4d-b29b-e6c4f9da64ce
-”	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ—Æç8½“¢“€2J$4a95c41e-ebdb-434e-b311-0961e4cb293a
-™	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›äŸÕşÿÿÿÿ8¾“¢“€2J$9be460f9-0f1b-4981-b73a-92a3231b96d8
+java:S1604ä"(Make this anonymous inner class a lambda(âÚÂÖ8º“¢“€2J$9e521854-15d4-4661-821b-70585161574e
+”	java:S117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ—Æç8½“¢“€2J$969f0be3-2bb6-47b7-b175-99e7ca176cec
+™	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›äŸÕşÿÿÿÿ8¾“¢“€2J$8f7020cd-1cbc-4b60-b136-009adfd219cb
 x
-java:S1066ï"/Merge this if statement with the enclosing one.(ØÖßáüÿÿÿÿ8Ã“¢“€2J$2d657039-1e2c-4f4a-8f36-1a56e207b08f
+java:S1066ï"/Merge this if statement with the enclosing one.(ØÖßáüÿÿÿÿ8Ã“¢“€2J$08942b4c-a72f-44e5-a3f4-19091ae2dd77
 •
-java:S1192¶"LDefine a constant instead of duplicating this literal "IOException" 5 times.(òŸš¡ùÿÿÿÿ8åŠ¾”€2J$c6990875-cb6f-40c9-baf5-71413887aacd
+java:S1192¶"LDefine a constant instead of duplicating this literal "IOException" 5 times.(òŸš¡ùÿÿÿÿ8åŠ¾”€2J$557792dc-d98b-4d9f-b334-866a5996eedf
 Ÿ
-java:S1450B"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8’”¢“€2J$5242381c-ff5c-4d77-8c2b-cd2fa3ffaf1c
+java:S1450B"\Remove the "layoutManager" field and declare it as a local variable in the relevant methods.(üÉÙ¼8’”¢“€2J$ad51d634-7170-4b25-a022-274ded4fefc8
 ™
-java:S1450?"WRemove the "position" field and declare it as a local variable in the relevant methods.(•È?8””¢“€2J$6b0f47ff-a38e-46a6-ac81-cd935c3e17f1
+java:S1450?"WRemove the "position" field and declare it as a local variable in the relevant methods.(•È?8””¢“€2J$d1cc0f6b-3583-4ff0-8dea-8bdc6ac07cb8
 ‚
-java:S1612i"?Replace this lambda with method reference 'this::changeStatus'.(¶Ä€Ÿ8†•¢“€2J$1e724402-0015-4cbb-b21b-f43ead99663b
+java:S1612i"?Replace this lambda with method reference 'this::changeStatus'.(¶Ä€Ÿ8†•¢“€2J$05b3be05-dd44-4559-96ad-03614facc958
 
-java:S1874n"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8••¢“€2J$0a512803-8461-48b6-b652-06541c346849
+java:S1874n"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(ŸŒ¹Ñ8••¢“€2J$be806c53-63f6-404a-8cb4-b21c72b3b85c
 •
-java:S3776n"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ŸŒ¹Ñ8š•¢“€2J$6b6769b9-8dd8-4df8-b45f-53b099e7f985
+java:S3776n"RRefactor this method to reduce its Cognitive Complexity from 17 to the 15 allowed.(ŸŒ¹Ñ8š•¢“€2J$129e5285-64fd-4e49-ad72-bcb5874834b1
 “
-java:S1874Æ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8Ê•¢“€2J$03657618-ddb4-421f-9994-f65147fa87b2
+java:S1874Æ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ8Ê•¢“€2J$8bddcd51-499b-4852-94a2-54f2cd325d60
 ›
-java:S3776ù"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(è…Æ²ıÿÿÿÿ8å•¢“€2J$57722b8f-1d01-41ac-b1e8-7c88103c17e3
+java:S3776ù"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(è…Æ²ıÿÿÿÿ8å•¢“€2J$d967bcde-eb61-41b8-86b2-d633d95314cf
 y
-java:S1874‡"5Remove this use of "onBackPressed"; it is deprecated.(¾®±¿8’–¢“€2J$fb8392a0-ebcc-4ffa-a90a-4b7bd3327345
+java:S1874‡"5Remove this use of "onBackPressed"; it is deprecated.(¾®±¿8’–¢“€2J$2cefb53a-ef01-40b5-bc25-a932289c33df
 …
-java:S1612‰"BReplace this lambda with method reference 'this::onMenuItemClick'.(ä§¦G8Ğ–¢“€2J$6f0e1de6-ee25-47b4-80ec-32b4239949b5
+java:S1612‰"BReplace this lambda with method reference 'this::onMenuItemClick'.(ä§¦G8Ğ–¢“€2J$9a4e8162-ee46-4ab9-b2b4-633507b84c97
 µ
-java:S1130ß"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(åÇû¢üÿÿÿÿ8¼˜¢“€2J$0f89e29f-58a9-4e84-a81b-77765d6ee86a
+java:S1130ß"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(åÇû¢üÿÿÿÿ8¼˜¢“€2J$3ee59b37-c291-4d87-b43d-7f557edccf5a
 o
-java:S1075ì"&Remove this hard-coded path-delimiter.(ˆÌÃŸşÿÿÿÿ8ì™¢“€2J$3045a601-91cc-4c9a-a47e-a9f6c3a168e0
+java:S1075ì"&Remove this hard-coded path-delimiter.(ˆÌÃŸşÿÿÿÿ8ì™¢“€2J$05bc69fd-1abc-4d56-8cc7-ae5b7dd7e280
 o
-java:S1075ì"&Remove this hard-coded path-delimiter.(ˆÌÃŸşÿÿÿÿ8í™¢“€2J$e948f70f-bea2-4bbd-935c-8643ba10e41a
+java:S1075ì"&Remove this hard-coded path-delimiter.(ˆÌÃŸşÿÿÿÿ8í™¢“€2J$92233037-5a60-48b6-9264-10023b4636e8
 ’
-java:S4042ú"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(˜ÜùŠ8ï™¢“€2J$3b2e7d92-690d-461b-b7a2-d1a3c46eef03
+java:S4042ú"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(˜ÜùŠ8ï™¢“€2J$e0a79fde-5194-46e6-9a8e-624f04e1ba74
 ‚
-java:S1874Ÿ">Remove this use of "startActivityForResult"; it is deprecated.(¤ü©Â8ô™¢“€2J$2dfd07be-ef6d-4df4-a51a-5364f1922c69
+java:S1874Ÿ">Remove this use of "startActivityForResult"; it is deprecated.(¤ü©Â8ô™¢“€2J$9ffd36d0-b71f-4cc7-af59-4a537d55b7cc
 ˆ
-java:S1854¦"DRemove this useless assignment to local variable "rollNumberString".(ô õ8û™¢“€2J$2074783d-f7e6-4249-919c-b4e2dc031952
+java:S1854¦"DRemove this useless assignment to local variable "rollNumberString".(ô õ8û™¢“€2J$6aa8e575-02ee-4ba8-bc4f-1e562d67e904
 y
-java:S1481¦"5Remove this unused "rollNumberString" local variable.(ô õ8¦š¢“€2J$3f17ef59-32c3-4ff5-93bf-9757ba5fafa1
-„	java:S125§"<This block of commented-out lines of code should be removed.(ß˜²şûÿÿÿÿ8ªš¢“€2J$ba238a98-398b-48fd-973f-c7a9d29cedcd
+java:S1481¦"5Remove this unused "rollNumberString" local variable.(ô õ8¦š¢“€2J$dff77139-bd4b-4aee-9265-ef442e980e9a
+„	java:S125§"<This block of commented-out lines of code should be removed.(ß˜²şûÿÿÿÿ8ªš¢“€2J$76942137-a8d7-471d-a587-73e7892f1b49
 ˆ
-java:S1854¹"DRemove this useless assignment to local variable "rollNumberString".(ô õ8«š¢“€2J$d7e6491d-e290-4da8-9c1f-935c77c51bdf
+java:S1854¹"DRemove this useless assignment to local variable "rollNumberString".(ô õ8«š¢“€2J$21cdebdd-6eaa-4680-833a-d126286803e3
 y
-java:S1481¹"5Remove this unused "rollNumberString" local variable.(ô õ8®š¢“€2J$be8fae92-95e3-4f67-b05d-e3bcfc9f0c24
-„	java:S125»"<This block of commented-out lines of code should be removed.(ß˜²şûÿÿÿÿ8°š¢“€2J$33b3f620-f033-4f99-9267-e566899250c8
+java:S1481¹"5Remove this unused "rollNumberString" local variable.(ô õ8®š¢“€2J$056db652-e05b-43e6-95b2-f2cf18db8a41
+„	java:S125»"<This block of commented-out lines of code should be removed.(ß˜²şûÿÿÿÿ8°š¢“€2J$9b3ec000-3854-4c86-8625-4bb3c8723d30
 
-java:S1874ß">Remove this use of "startActivityForResult"; it is deprecated.(¸Øô48±š¢“€2J$01c861dc-dd54-442d-a607-c9af58ff8529
+java:S1874ß">Remove this use of "startActivityForResult"; it is deprecated.(¸Øô48±š¢“€2J$3c8f956d-de36-4a48-b614-5bfebcf3c679
 ‡
-java:S1874ç">Remove this use of "startActivityForResult"; it is deprecated.(¦‡Êúÿÿÿÿ8¶š¢“€2J$8c050b67-84d9-414c-b017-e4dec08713f7
-„	java:S125í"<This block of commented-out lines of code should be removed.(àôûíúÿÿÿÿ8Äš¢“€2J$c00de584-de03-4f24-8b9c-65efac8ea7e8
-	java:S125ü"<This block of commented-out lines of code should be removed.(º¥ı8Êš¢“€2J$ad78e1f2-0e64-43e2-afe4-c0020cf2d785
-–	java:S100Á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ß»úÿÿÿÿ8‰›¢“€2J$10e3bd01-21ef-45d0-9e96-3bdcf910b3d9
+java:S1874ç">Remove this use of "startActivityForResult"; it is deprecated.(¦‡Êúÿÿÿÿ8¶š¢“€2J$c228cf45-f8ae-4084-b810-945822ff5f39
+^	java:S125í"<This block of commented-out lines of code should be removed.(àôûíúÿÿÿÿ8½Å‚º€2
+	java:S125ü"<This block of commented-out lines of code should be removed.(º¥ı8Êš¢“€2J$e5088b4f-ce0e-4c75-9e05-adecc17a2f61
+–	java:S100Á"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ß»úÿÿÿÿ8‰›¢“€2J$9a73e336-f048-4e57-8475-a7d2f6b1fc68
 
-java:S1612Ë"=Replace this lambda with method reference 'this::addStudent'.(Ì¢úÆ8¤›¢“€2J$5825d4c6-5629-4ab5-ac73-eb99f8c3a7e3
+java:S1612Ë"=Replace this lambda with method reference 'this::addStudent'.(Ì¢úÆ8¤›¢“€2J$da264558-deda-4a75-8825-fbb608373ffa
 …
-java:S1117Ú"<Rename "position" which hides the field declared at line 63.(ØÀ¨Ÿÿÿÿÿÿ8²›¢“€2J$23debdf6-d406-49f2-854b-e9c290c0907f
-j	java:S131ù""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8¿›¢“€2J$65f50a69-ea53-44f2-925c-0d0b3c82310d
+java:S1117Ú"<Rename "position" which hides the field declared at line 63.(ØÀ¨Ÿÿÿÿÿÿ8²›¢“€2J$4b629d8b-3cc9-405e-8ad5-200d14555adf
+j	java:S131ù""Add a default case to this switch.(øå´¡ÿÿÿÿÿ8¿›¢“€2J$39eeb4ce-c658-4636-8c3c-7e707e4606ec
 n
-java:S1068?",Remove this unused "position" private field.(•È?8Ö›¢“€2J$174c7e98-f7de-4bc9-933a-7f21bd683d9f
+java:S1068?",Remove this unused "position" private field.(•È?8Ö›¢“€2J$3047506b-719a-4887-baac-7d1ca0574771
 ~
-java:S1068N"6Remove this unused "REQUEST_PICK_VIDEO" private field.(êØ€âşÿÿÿÿ8ç›¢“€2J$529243c0-a55c-4456-85ab-d45a310e4c9a
+java:S1068N"6Remove this unused "REQUEST_PICK_VIDEO" private field.(êØ€âşÿÿÿÿ8ç›¢“€2J$bdd24ff3-6be7-432c-b5e2-6c7da3182130
