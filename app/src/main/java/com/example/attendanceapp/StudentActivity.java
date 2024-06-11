@@ -186,14 +186,12 @@ public class StudentActivity extends AppCompatActivity {
 
     private void saveImageToGallery(Uri selectedImageUri, File imageFile) throws IOException {
         InputStream is = getContentResolver().openInputStream(selectedImageUri);
+        Bitmap bitmap = BitmapFactory.decodeStream(is);
         FileOutputStream fos = new FileOutputStream(imageFile);
-        byte[] buffer = new byte[1024];
-        int bytesRead;
-        while ((bytesRead = is.read(buffer)) != -1) {
-            fos.write(buffer, 0, bytesRead);
-        }
-        is.close();
+        // Compress the bitmap with 33% quality and write it to the file output stream
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 33, fos);
         fos.close();
+        is.close();
     }
 
     @Override
