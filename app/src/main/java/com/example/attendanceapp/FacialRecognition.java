@@ -10,6 +10,7 @@ import org.opencv.core.Core;
 import org.opencv.core.Mat;
 import org.opencv.core.MatOfRect;
 import org.opencv.core.Rect;
+import org.opencv.core.Size;
 import org.opencv.imgcodecs.Imgcodecs;
 import org.opencv.imgproc.Imgproc;
 import org.opencv.objdetect.CascadeClassifier;
@@ -121,6 +122,13 @@ public class FacialRecognition {
                     return;
                 }
 
+
+                // Resize the image to 33% of its original size
+                Mat resizedImage = new Mat();
+                Size newSize = new Size(image.cols() * 0.50, image.rows() * 0.50);
+                Imgproc.resize(image, resizedImage, newSize);
+
+
                 // Apply histogram equalization
                 Imgproc.equalizeHist(image, image);
 
@@ -223,6 +231,13 @@ public class FacialRecognition {
                 while (videoCapture.read(frame)) {
                     Mat grayFrame = new Mat();
                     Imgproc.cvtColor(frame, grayFrame, Imgproc.COLOR_BGR2GRAY);
+
+
+                    // Resize the frame to 33% of its original size
+                    Mat resizedFrame = new Mat();
+                    Size newSize = new Size(grayFrame.cols() * 0.50, grayFrame.rows() * 0.50);
+                    Imgproc.resize(grayFrame, resizedFrame, newSize);
+
 
                     // Apply histogram equalization
                     Imgproc.equalizeHist(grayFrame, grayFrame);

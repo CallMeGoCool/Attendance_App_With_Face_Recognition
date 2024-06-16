@@ -1,23 +1,23 @@
 
 ~
-java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ì†ã¹€2J$ba451095-6ab2-4ea8-855b-33a19367c378
-X
-java:S1141„"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8†Øş¹€2
+java:S1141¥"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8Ì†ã¹€2J$bd6056f4-ee16-4fd4-80e1-64e288936248
+~
+java:S1141“"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8†Øş¹€2J$b25a5e65-2f3b-4a85-94cc-7ef0c53155e9
 §
-java:S1192¨"^Define a constant instead of duplicating this literal "Hello, best match found with " 4 times.(èÄµ¯ıÿÿÿÿ8‚ÿú¹€2J$fcb82e5f-6d25-4968-8874-80b25f146dfb
+java:S1192°"^Define a constant instead of duplicating this literal "Hello, best match found with " 4 times.(èÄµ¯ıÿÿÿÿ8‚ÿú¹€2J$7d799565-9286-4288-8bf4-bab8eaad676f
 ›
-java:S1192@"SDefine a constant instead of duplicating this literal "FacialRecognition" 13 times.(îäò°üÿÿÿÿ8Ä¹¹€2J$93e09913-17fd-4447-91d6-63b3dd50c89b
+java:S1192A"SDefine a constant instead of duplicating this literal "FacialRecognition" 13 times.(îäò°üÿÿÿÿ8Ä¹¹€2J$7e561644-5fd5-4c71-b9c4-48040aa637cf
 š
-java:S3776L"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(ËĞŠ¦ÿÿÿÿÿ8òŸ¹¹€2J$02b3bf2d-89f0-46c8-b938-0b417c900951
+java:S3776M"RRefactor this method to reduce its Cognitive Complexity from 32 to the 15 allowed.(ËĞŠ¦ÿÿÿÿÿ8òŸ¹¹€2J$be81ce93-e74e-4cb2-a098-c90a8458b777
 n
-java:S1075N"&Remove this hard-coded path-delimiter.(Ôˆ††ıÿÿÿÿ8ûŸ¹¹€2J$5d7271e2-9c3a-43cd-91ab-25547de5e7c0
+java:S1075O"&Remove this hard-coded path-delimiter.(Ôˆ††ıÿÿÿÿ8ûŸ¹¹€2J$b6e8a727-e288-4047-812b-b0cf61c6b175
 n
-java:S1075N"&Remove this hard-coded path-delimiter.(Ôˆ††ıÿÿÿÿ8ıŸ¹¹€2J$b1a5f0b4-5f0d-481c-a21e-36bc65c34412
+java:S1075O"&Remove this hard-coded path-delimiter.(Ôˆ††ıÿÿÿÿ8ıŸ¹¹€2J$00c49d7c-994f-4079-be17-da18976882fc
 •
-java:S3776q"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(–ôÿ½8ò‹û¹€2J$72f0fe90-6cf8-4ec4-8850-62ff444426ff
+java:S3776r"RRefactor this method to reduce its Cognitive Complexity from 40 to the 15 allowed.(–ôÿ½8ò‹û¹€2J$ee829605-3dca-4c79-9aaa-d20c9922d743
 p
-java:S1602»",Remove useless curly braces around statement(¿€û8ä ¹¹€2J$a1138687-880d-4cd1-a658-16cb67102997
+java:S1602Ã",Remove useless curly braces around statement(¿€û8ä ¹¹€2J$21404d52-bb71-4718-b72b-1e60e2f45018
 ›
-java:S3776Ğ"RRefactor this method to reduce its Cognitive Complexity from 46 to the 15 allowed.(»ô½Šÿÿÿÿÿ8Ò ¹¹€2J$8352de36-a176-4cf0-b031-ed6f69538a09
-J
-java:S1602¢",Remove useless curly braces around statement(¿€û8€Üş¹€2
+java:S3776Ø"RRefactor this method to reduce its Cognitive Complexity from 46 to the 15 allowed.(»ô½Šÿÿÿÿÿ8Ò ¹¹€2J$f7f72505-5edf-4bd5-b755-bf5f9a66a9fb
+p
+java:S1602±",Remove useless curly braces around statement(¿€û8€Üş¹€2J$17db11d2-26e5-468c-aed0-4299490f9354

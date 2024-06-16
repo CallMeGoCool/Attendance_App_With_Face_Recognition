@@ -49,3 +49,9 @@ r
 Bapp/src/main/java/com/example/attendanceapp/FacialRecognition.java,d\8\d879498e3a7b3c213b5f134fa4028867a5c410b9
 E
 opencv49/build.gradle,5\8\580dc2c0b0348429c2751fb144b25936aa46feda
+I
+gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
